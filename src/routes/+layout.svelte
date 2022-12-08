@@ -4,23 +4,6 @@
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
 	import { Img } from 'flowbite-svelte';
 
-	function getRouteColors(route: string): string {
-		// NOTE: NOT IN USE ANYMORE
-		// Function for switching header background color
-		switch (route) {
-			case '/':
-				return 'bg-white text-black';
-			case '/projects':
-				return 'bg-projects-background text-projects-text-second';
-			case '/cv':
-				return 'bg-page-3-background-1 text-black';
-			case '/contact':
-				return 'bg-page-4-orange text-white';
-			default:
-				return '';
-		}
-	}
-
 	let routes = [
 		{ title: 'Home', url: '/' },
 		{ title: 'Projects', url: '/projects' },
