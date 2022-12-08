@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'futura light';
+		src: url(/futura/FuturaLT-Light.woff) format('woff');
+		font-weight: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'futura book';
+		src: url(/futura/FuturaLT-Book.woff) format('woff');
+		font-weight: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'futura medium';
+		src: url(/futura/FuturaLT.woff) format('woff');
+		font-weight: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'futura heavy';
+		src: url(/futura/FuturaLT-Heavy.woff) format('woff');
+		font-weight: bold;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'futura bold';
+		src: url(/futura/FuturaLT-Bold.woff) format('woff');
+		font-weight: bold;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'futura bold oblique';
+		src: url(/futura/FuturaLT-BoldOblique.woff) format('woff');
+		font-weight: bold;
+		font-display: swap;
+	}
+}

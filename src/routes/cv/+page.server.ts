@@ -1,0 +1,19 @@
+import client from '../../sanity/sanityClient';
+
+// export const load: PageServerLoad = async ()
+export async function load() {
+	const data = await client.fetch(`*[_type == "companies"]`);
+
+	if (data) {
+		return {
+			status: 200,
+			body: {
+				companies: data
+			}
+		};
+	}
+	return {
+		status: 500,
+		body: new Error('Internal Server Error')
+	};
+}
