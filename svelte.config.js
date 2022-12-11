@@ -11,12 +11,7 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter(),
-		vite: {
-			define: {
-				'process.env': process.env
-			}
-		}
+		adapter: adapter()
 	}
 };
 

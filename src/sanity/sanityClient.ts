@@ -1,7 +1,6 @@
 import sanityClient from '@sanity/client';
 // import { SECRET_SANITY_PROJECT_ID_KEY } from '$env/static/private';
-// import { PUBLIC_SANITY_PROJECT_ID_KEY } from '$env/static/public';
-import { PUBLIC_SANITY_PROJECT_ID_KEY } from '../lib/Env';
+import { PUBLIC_SANITY_PROJECT_ID_KEY } from '$env/static/public';
 
 const client = sanityClient({
 	projectId: PUBLIC_SANITY_PROJECT_ID_KEY,

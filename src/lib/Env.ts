@@ -1,1 +1,0 @@
-export const PUBLIC_SANITY_PROJECT_ID_KEY = import.meta.env.PUBLIC_SANITY_PROJECT_ID_KEY;
