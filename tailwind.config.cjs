@@ -27,7 +27,8 @@ module.exports = {
 				'projects-background': '#26252a',
 				'projects-text-second': '#efb8ae',
 				'page-3-blue': '#4ae5ef',
-				'page-4-orange': '#f84f39'
+				'page-4-orange': '#f84f39',
+				'grey-border': '#e5e7eB'
 			}
 		}
 	},

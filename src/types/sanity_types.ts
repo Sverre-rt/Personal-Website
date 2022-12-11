@@ -1,7 +1,14 @@
 export type CompanyType = {
 	name: string;
 	location: GeoData;
-	logo: Logo;
+	logo: Image;
+	startDate: string;
+	endDate: string;
+	position: string;
+	jobDescription: string;
+	city: string;
+	country: string;
+	memoryImage: Image;
 };
 
 type GeoData = {
@@ -10,10 +17,16 @@ type GeoData = {
 	lng: number;
 };
 
-type Logo = {
+type Image = {
 	asset: Ref;
 };
 
 type Ref = {
 	_ref: string;
+};
+
+export type Social_media = {
+	title: string;
+	image: Image;
+	url: string;
 };

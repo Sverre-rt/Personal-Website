@@ -2,13 +2,15 @@ import client from '../sanity/sanityClient';
 
 // export const load: PageServerLoad = async ()
 export async function load() {
-	const data = await client.fetch(`*[_type == "people"]`);
+	const people_data = await client.fetch(`*[_type == "people"]`);
+	const social_media_data = await client.fetch(`*[_type == "social_media"]`);
 
-	if (data) {
+	if (people_data && social_media_data) {
 		return {
 			status: 200,
 			body: {
-				people: data
+				people: people_data,
+				social_media: social_media_data
 			}
 		};
 	}

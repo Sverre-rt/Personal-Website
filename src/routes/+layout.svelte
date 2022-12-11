@@ -7,14 +7,14 @@
 	let routes = [
 		{ title: 'Home', url: '/' },
 		{ title: 'Projects', url: '/projects' },
-		{ title: 'CV', url: '/cv' },
+		{ title: 'Experience', url: '/experience' },
 		{ title: 'Contact', url: '/contact' }
 	];
 
 	let data = $$props.data;
 </script>
 
-<nav class="flex sticky top-0 items-center bg-grey-background-1">
+<nav class="flex sticky top-0 items-center bg-grey-background-1 z-50">
 	<div class="ml-6 ">
 		<a href="/">
 			<Img src={urlFor(data.body.bitmojis[0].bitmoji).url()} class="w-20" />
