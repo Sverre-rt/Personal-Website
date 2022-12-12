@@ -10,7 +10,8 @@
 		{ title: 'Contact', url: '/contact' }
 	];
 
-	let data = $$props.data;
+	// let data = $$props.data;
+	export let data: any;
 	console.log('HEADER DATA:', data);
 </script>
 

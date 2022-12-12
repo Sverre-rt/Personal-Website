@@ -5,7 +5,7 @@
 	import { urlFor } from '../helper_functions/SanityHelper.svelte';
 	const builder = imageUrlBuilder(myConfiguredSanityClient);
 
-	let data = $$props.data;
+	export let data: any;
 	export let companies: CompanyType[] = data.body.companies;
 </script>
 

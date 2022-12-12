@@ -10,7 +10,7 @@
 	function handleMouseOut(event: any) {
 		visibility = 'invisible';
 	}
-	let data = $$props.data;
+	export let data: any;
 	let social_media_data: Social_media[] = data.body.social_media;
 </script>
 
