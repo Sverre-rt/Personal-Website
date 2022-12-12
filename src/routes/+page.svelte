@@ -42,18 +42,18 @@
 				{/each}
 			</div>
 		</div>
-		<div
+		<!-- <div
 			on:mouseover={handleMouseOver}
 			on:focus={() => void 0}
 			on:mouseout={handleMouseOut}
 			on:blur={() => void 0}
-		>
-			<img
-				src={urlFor(data.body.people[0].profile_picture).width(2000).height(2000).url()}
-				class="rounded-full w-80 drop-shadow-xl outline outline-offset-40"
-				alt="profile_picture"
-				loading="lazy"
-			/>
-		</div>
+		> -->
+		<img
+			src={urlFor(data.body.people[0].profile_picture).width(2000).height(2000).url()}
+			class="rounded-full w-80 drop-shadow-xl outline outline-offset-40"
+			alt="profile_picture"
+			loading="lazy"
+		/>
+		<!-- </div> -->
 	</div>
 </div>
