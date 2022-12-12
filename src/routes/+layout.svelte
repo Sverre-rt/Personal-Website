@@ -7,12 +7,12 @@
 	import { page } from '$app/stores';
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
 
-	let routes = [
-		{ title: 'Home', url: '/' },
-		{ title: 'Projects', url: '/projects' },
-		{ title: 'Experience', url: '/experience' },
-		{ title: 'Contact', url: '/contact' }
-	];
+	// let routes = [
+	// 	{ title: 'Home', url: '/' },
+	// 	{ title: 'Projects', url: '/projects' },
+	// 	{ title: 'Experience', url: '/experience' },
+	// 	{ title: 'Contact', url: '/contact' }
+	// ];
 
 	// let data = $$props.data;
 	// export let data: any;
@@ -31,14 +31,14 @@
 		</a>
 	</div> -->
 	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
-		{#each routes as route}
+		<!-- {#each routes as route}
 			<a
 				data-sveltekit-preload-data="tap"
 				href={route.url}
 				class="hover:text-red-home"
 				class:active={$page.url.pathname === route.url}>{route.title}</a
 			>
-		{/each}
+		{/each} -->
 	</div>
 </nav>
 
