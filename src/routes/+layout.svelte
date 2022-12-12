@@ -20,6 +20,7 @@
 				src={urlFor(data.body.bitmojis[0].bitmoji).url()}
 				class="w-20"
 				alt="bitmoji-{data.body.bitmojis[0].name}"
+				loading="lazy"
 			/>
 		</a>
 	</div>

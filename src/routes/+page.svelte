@@ -28,7 +28,12 @@
 			<div class="flex flex-row space-x-1 pt-2">
 				{#each social_media_data as s_media}
 					<a href={s_media.url} target="_blank" rel="noopener noreferrer">
-						<img src={urlFor(s_media.image).url()} class="w-20" alt="s_media-{s_media.title}" />
+						<img
+							src={urlFor(s_media.image).url()}
+							class="w-20"
+							alt="s_media-{s_media.title}"
+							loading="lazy"
+						/>
 					</a>
 				{/each}
 			</div>
@@ -43,6 +48,7 @@
 				src={urlFor(data.body.people[0].profile_picture).width(2000).height(2000).url()}
 				class="rounded-full w-80 drop-shadow-xl outline outline-offset-40"
 				alt="profile_picture"
+				loading="lazy"
 			/>
 		</div>
 	</div>
