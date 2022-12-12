@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Img } from 'flowbite-svelte';
 	import type { Social_media } from 'src/types/sanity_types';
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
 
@@ -13,7 +12,6 @@
 	}
 	let data = $$props.data;
 	let social_media_data: Social_media[] = data.body.social_media;
-	console.log('DATA:', social_media_data);
 </script>
 
 <div class="bg-grey-background-1 h-screen flex justify-center items-start">
@@ -30,7 +28,7 @@
 			<div class="flex flex-row space-x-1 pt-2">
 				{#each social_media_data as s_media}
 					<a href={s_media.url} target="_blank" rel="noopener noreferrer">
-						<Img src={urlFor(s_media.image).url()} class="w-10" />
+						<img src={urlFor(s_media.image).url()} class="w-20" alt="s_media-{s_media.title}" />
 					</a>
 				{/each}
 			</div>
@@ -41,9 +39,10 @@
 			on:mouseout={handleMouseOut}
 			on:blur={() => void 0}
 		>
-			<Img
+			<img
 				src={urlFor(data.body.people[0].profile_picture).width(2000).height(2000).url()}
-				class="rounded-full w-80 drop-shadow-xl outline outline-offset-4"
+				class="rounded-full w-80 drop-shadow-xl outline outline-offset-40"
+				alt="profile_picture"
 			/>
 		</div>
 	</div>

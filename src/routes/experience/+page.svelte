@@ -1,17 +1,20 @@
 <script lang="ts">
 	import type { CompanyType } from '../../types/sanity_types';
-	import { Img } from 'flowbite-svelte';
 	import myConfiguredSanityClient from '../../sanity/sanityClient';
 	import imageUrlBuilder from '@sanity/image-url';
+	import { urlFor } from '../helper_functions/SanityHelper.svelte';
 	const builder = imageUrlBuilder(myConfiguredSanityClient);
-
-	function urlFor(source: any) {
-		return builder.image(source);
-	}
 
 	let data = $$props.data;
 	export let companies: CompanyType[] = data.body.companies;
 </script>
+
+<!-- 
+<svelte:head>
+	{#each companies as companie}
+		<link rel="preload" as="image" href={urlFor(companie.memoryImage).width(1000).url()} />
+	{/each}
+</svelte:head> -->
 
 <div class="text-black bg-grey-background-1 h-screen pt-6 ml-4">
 	<p class="text-4xl mb-4">My work experience</p>
@@ -23,7 +26,11 @@
 				<div
 					class="flex w-full rounded-t-lg bg-red-home justify-center pt-4 pb-4 border-b-2 border-grey-border"
 				>
-					<Img src={urlFor(companie.logo).url()} class="w-fit min-h-12 max-h-12" />
+					<img
+						src={urlFor(companie.logo).url()}
+						class="w-fit min-h-12 max-h-12"
+						alt="logo-{companie.name}"
+					/>
 				</div>
 				<div class="flex flex-col w-full pr-2 pl-2 ">
 					<div class="flex flex-row justify-between items-center">
@@ -47,7 +54,11 @@
 							<p class="font-futuraHeavy">Job Description:</p>
 							<p class="font-futuraMedium">{companie.jobDescription}</p>
 						</div>
-						<Img src={urlFor(companie.memoryImage).url()} class="w-60" />
+						<img
+							src={urlFor(companie.memoryImage).width(1000).url()}
+							class="w-60"
+							alt="memory-{companie.name}"
+						/>
 					</div>
 				</div>
 			</div>
