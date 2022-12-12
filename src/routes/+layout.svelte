@@ -15,12 +15,12 @@
 	];
 
 	// let data = $$props.data;
-	export let data: any;
-	console.log('HEADER DATA:', data);
+	// export let data: any;
+	// console.log('HEADER DATA:', data);
 </script>
 
 <nav class="flex sticky top-0 items-center bg-grey-background-1 z-50">
-	<div class="ml-6 ">
+	<!-- <div class="ml-6 ">
 		<a href="/">
 			<img
 				src={urlFor(data.body.bitmojis[0].bitmoji).url()}
@@ -29,7 +29,7 @@
 				loading="lazy"
 			/>
 		</a>
-	</div>
+	</div> -->
 	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
 		{#each routes as route}
 			<a
