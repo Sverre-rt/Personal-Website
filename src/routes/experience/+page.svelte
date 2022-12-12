@@ -30,6 +30,7 @@
 						src={urlFor(companie.logo).url()}
 						class="w-fit min-h-12 max-h-12"
 						alt="logo-{companie.name}"
+						loading="lazy"
 					/>
 				</div>
 				<div class="flex flex-col w-full pr-2 pl-2 ">
@@ -58,6 +59,7 @@
 							src={urlFor(companie.memoryImage).width(1000).url()}
 							class="w-60"
 							alt="memory-{companie.name}"
+							loading="lazy"
 						/>
 					</div>
 				</div>
