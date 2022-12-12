@@ -11,6 +11,7 @@
 	];
 
 	let data = $$props.data;
+	console.log('HEADER DATA:', data);
 </script>
 
 <nav class="flex sticky top-0 items-center bg-grey-background-1 z-50">
