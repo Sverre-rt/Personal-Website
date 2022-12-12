@@ -27,12 +27,12 @@
 	</div>
 	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
 		{#each routes as route}
-			<!-- <a
+			<a
+				data-sveltekit-preload-data="tap"
 				href={route.url}
 				class="hover:text-red-home"
 				class:active={$page.url.pathname === route.url}>{route.title}</a
-			> -->
-			<a href={route.url} class="hover:text-red-home">{route.title}</a>
+			>
 		{/each}
 	</div>
 </nav>
