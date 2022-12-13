@@ -6,6 +6,7 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
+	import type { PageData } from './$types';
 
 	// let routes = [
 	// 	{ title: 'Home', url: '/' },
@@ -15,7 +16,8 @@
 	// ];
 
 	// let data = $$props.data;
-	export let data: any;
+
+	export let data: PageData;
 	// console.log('HEADER DATA:', data);
 </script>
 
