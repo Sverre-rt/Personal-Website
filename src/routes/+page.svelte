@@ -1,7 +1,6 @@
-<script context="module">
+<!-- <script context="module">
 	export const prerender = true;
-</script>
-
+</script> -->
 <script lang="ts">
 	import type { Social_media } from 'src/types/sanity_types';
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
