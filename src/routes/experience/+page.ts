@@ -1,6 +1,5 @@
 import client from '../../sanity/sanityClient';
 
-// export const load: PageServerLoad = async ()
 // export async function load() {
 // 	const data = await client.fetch(`*[_type == "companies"] | order(endDate desc)`);
 
