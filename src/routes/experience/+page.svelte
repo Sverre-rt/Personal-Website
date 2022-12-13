@@ -1,13 +1,12 @@
-<script context="module">
+<!-- <script context="module">
 	export const prerender = true;
-</script>
-
+</script> -->
 <script lang="ts">
-	import type { CompanyType } from '../../types/sanity_types';
-	import myConfiguredSanityClient from '../../sanity/sanityClient';
-	import imageUrlBuilder from '@sanity/image-url';
-	import { urlFor } from '../helper_functions/SanityHelper.svelte';
-	const builder = imageUrlBuilder(myConfiguredSanityClient);
+	// import type { CompanyType } from '../../types/sanity_types';
+	// import myConfiguredSanityClient from '../../sanity/sanityClient';
+	// import imageUrlBuilder from '@sanity/image-url';
+	// import { urlFor } from '../helper_functions/SanityHelper.svelte';
+	// const builder = imageUrlBuilder(myConfiguredSanityClient);
 
 	// export let data: any;
 	// export let companies: CompanyType[] = data.body.companies;
