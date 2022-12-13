@@ -7,22 +7,14 @@
 	import { page } from '$app/stores';
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
 	import type { PageData } from './$types';
+	import type { Bitmoji } from 'src/types/sanity_types';
 
-	// let routes = [
-	// 	{ title: 'Home', url: '/' },
-	// 	{ title: 'Projects', url: '/projects' },
-	// 	{ title: 'Experience', url: '/experience' },
-	// 	{ title: 'Contact', url: '/contact' }
-	// ];
-
-	// let data = $$props.data;
-
-	export let data: PageData;
-	// console.log('HEADER DATA:', data);
+	export let data: any;
+	console.log(data);
 </script>
 
 <nav class="flex sticky top-0 items-center bg-grey-background-1 z-50">
-	<!-- <div class="ml-6 ">
+	<div class="ml-6 ">
 		<a href="/">
 			<img
 				src={urlFor(data.body.bitmojis[0].bitmoji).url()}
@@ -31,7 +23,7 @@
 				loading="lazy"
 			/>
 		</a>
-	</div> -->
+	</div>
 	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
 		{#each data.sections as section}
 			<a
@@ -42,14 +34,6 @@
 				>{section.title}
 			</a>
 		{/each}
-		<!-- {#each routes as route}
-			<a
-				data-sveltekit-preload-data="tap"
-				href={route.url}
-				class="hover:text-red-home"
-				class:active={$page.url.pathname === route.url}>{route.title}</a
-			>
-		{/each} -->
 	</div>
 </nav>
 
