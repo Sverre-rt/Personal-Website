@@ -13,8 +13,8 @@
 	function handleMouseOut(event: any) {
 		visibility = 'invisible';
 	}
-	// export let data: any;
-	// let social_media_data: Social_media[] = data.body.social_media;
+	export let data: any;
+	let social_media_data: Social_media[] = data.body.social_media;
 </script>
 
 <div class="bg-grey-background-1 h-screen flex justify-center items-start">
@@ -29,7 +29,7 @@
 			<p class="text-xl">Welcome to my website and have a look around!</p>
 			<div class="p-0.5 rounded bg-black mt-2" />
 			<div class="flex flex-row space-x-1 pt-2">
-				<!-- {#each social_media_data as s_media}
+				{#each social_media_data as s_media}
 					<a href={s_media.url} target="_blank" rel="noopener noreferrer">
 						<img
 							src={urlFor(s_media.image).url()}
@@ -38,10 +38,10 @@
 							loading="lazy"
 						/>
 					</a>
-				{/each} -->
+				{/each}
 			</div>
 		</div>
-		<!-- <div
+		<div
 			on:mouseover={handleMouseOver}
 			on:focus={() => void 0}
 			on:mouseout={handleMouseOut}
@@ -53,6 +53,6 @@
 				alt="profile_picture"
 				loading="lazy"
 			/>
-		</div> -->
+		</div>
 	</div>
 </div>

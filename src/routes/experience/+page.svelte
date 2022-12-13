@@ -2,27 +2,20 @@
 	export const prerender = true;
 </script> -->
 <script lang="ts">
-	// import type { CompanyType } from '../../types/sanity_types';
-	// import myConfiguredSanityClient from '../../sanity/sanityClient';
-	// import imageUrlBuilder from '@sanity/image-url';
-	// import { urlFor } from '../helper_functions/SanityHelper.svelte';
-	// const builder = imageUrlBuilder(myConfiguredSanityClient);
+	import type { CompanyType } from '../../types/sanity_types';
+	import myConfiguredSanityClient from '../../sanity/sanityClient';
+	import imageUrlBuilder from '@sanity/image-url';
+	import { urlFor } from '../helper_functions/SanityHelper.svelte';
+	const builder = imageUrlBuilder(myConfiguredSanityClient);
 
-	// export let data: any;
-	// export let companies: CompanyType[] = data.body.companies;
+	export let data: any;
+	export let companies: CompanyType[] = data.body.companies;
 </script>
-
-<!-- 
-<svelte:head>
-	{#each companies as companie}
-		<link rel="preload" as="image" href={urlFor(companie.memoryImage).width(1000).url()} />
-	{/each}
-</svelte:head> -->
 
 <div class="text-black bg-grey-background-1 h-screen pt-6 ml-4">
 	<p class="text-4xl mb-4">My work experience</p>
 	<div class="flex flex-row flex-wrap gap-6 justify-center">
-		<!-- {#each companies as companie}
+		{#each companies as companie}
 			<div
 				class="flex flex-col custom_width bg-grey-background-2 items-center drop-shadow-lg border rounded-lg border-grey-border"
 			>
@@ -67,7 +60,7 @@
 					</div>
 				</div>
 			</div>
-		{/each} -->
+		{/each}
 	</div>
 </div>
 
