@@ -8,6 +8,8 @@
 	import { urlFor } from '../helper_functions/SanityHelper.svelte';
 	const builder = imageUrlBuilder(myConfiguredSanityClient);
 
+	const card_bg_colors = ['bg-card-bg-1', 'bg-card-bg-2', 'bg-card-bg-3', 'bg-card-bg-4'];
+
 	export let data: any;
 	export let companies: CompanyType[] = data.body.companies;
 </script>
@@ -15,16 +17,18 @@
 <div class="text-black bg-grey-background-1 h-screen pt-6 ml-4">
 	<p class="text-4xl mb-4">My work experience</p>
 	<div class="flex flex-row flex-wrap gap-6 justify-center">
-		{#each companies as companie}
+		{#each companies as companie, i}
 			<div
 				class="flex flex-col custom_width bg-grey-background-2 items-center drop-shadow-lg border rounded-lg border-grey-border"
 			>
 				<div
-					class="flex w-full rounded-t-lg bg-red-home justify-center pt-4 pb-4 border-b-2 border-grey-border"
+					class="flex w-full rounded-t-lg justify-center pt-4 pb-4 border-b-2 border-grey-border {card_bg_colors[
+						i % card_bg_colors.length
+					]}"
 				>
 					<img
 						src={urlFor(companie.logo).url()}
-						class="w-fit min-h-12 max-h-12"
+						class="w-fit min-h-14 max-h-14"
 						alt="logo-{companie.name}"
 						loading="lazy"
 					/>

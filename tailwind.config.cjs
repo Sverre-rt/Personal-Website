@@ -28,7 +28,11 @@ module.exports = {
 				'projects-text-second': '#efb8ae',
 				'page-3-blue': '#4ae5ef',
 				'page-4-orange': '#f84f39',
-				'grey-border': '#e5e7eB'
+				'grey-border': '#e5e7eB',
+				'card-bg-1': '#00b7b7',
+				'card-bg-2': '#ffe7a8',
+				'card-bg-3': '#fcb614',
+				'card-bg-4': '#f26227'
 			}
 		}
 	},
