@@ -1,4 +1,5 @@
-// export const prerender = true;
+// NEED THIS LINE TO BE ABLE TO BUILD
+export const prerender = true;
 
 /** @type {import('./$types').LayoutLoad} */
 export function load() {
