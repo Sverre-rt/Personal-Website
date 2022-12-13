@@ -2,6 +2,7 @@ import sanityClient from '@sanity/client';
 // import { SECRET_SANITY_PROJECT_ID_KEY } from '$env/static/private';
 import { PUBLIC_SANITY_PROJECT_ID_KEY } from '$env/static/public';
 
+/** @type {import('./$types').PageServerLoad} */
 const client = sanityClient({
 	projectId: PUBLIC_SANITY_PROJECT_ID_KEY,
 	dataset: 'production',

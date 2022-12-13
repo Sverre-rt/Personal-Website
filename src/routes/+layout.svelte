@@ -15,7 +15,7 @@
 	// ];
 
 	// let data = $$props.data;
-	// export let data: any;
+	export let data: any;
 	// console.log('HEADER DATA:', data);
 </script>
 
@@ -31,6 +31,15 @@
 		</a>
 	</div> -->
 	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
+		{#each data.sections as section}
+			<a
+				data-sveltekit-preload-data="tap"
+				href="/{section.slug}"
+				class="hover:text-red-home"
+				class:active={$page.url.pathname === '/' + section.slug}
+				>{section.title}
+			</a>
+		{/each}
 		<!-- {#each routes as route}
 			<a
 				data-sveltekit-preload-data="tap"
