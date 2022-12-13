@@ -33,16 +33,19 @@
 		</a>
 	</div> -->
 	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
-		{#each data.sections as section}
-			<a href="/{section.slug}">{section.title}</a>
-			<!-- <a
+		<a href="/">Home</a>
+		<a href="/projects">Projects</a>
+		<a href="/experience">Experience</a>
+		<a href="/contact">Contact</a>
+		<!-- {#each data.sections as section}
+			<a
 				data-sveltekit-preload-data="tap"
 				href="/{section.slug}"
 				class="hover:text-red-home"
 				class:active={$page.url.pathname === '/' + section.slug}
 				>{section.title}
-			</a> -->
-		{/each}
+			</a>
+		{/each} -->
 		<!-- {#each routes as route}
 			<a
 				data-sveltekit-preload-data="tap"
