@@ -52,3 +52,21 @@ export interface Bitmoji {
 	_type: string;
 	_updatedAt: string;
 }
+
+export interface Technology {
+	_createdAt: string;
+	_id: string;
+	_rev: string;
+	_type: string;
+	_updatedAt: string;
+	category: string;
+	name: string;
+}
+
+export enum Technology_Name {
+	Programming_languages = 'Programming languages',
+	Frontend_frameworks_and_libraries = 'Frontend frameworks and libraries',
+	Backend_technologies = 'Backend technologies',
+	Platforms_and_hosting = 'Platforms and hosting',
+	Content_management_systems = 'Content management systems'
+}
