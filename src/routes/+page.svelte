@@ -4,6 +4,7 @@
 <script lang="ts">
 	import type { Social_media } from 'src/types/sanity_types';
 	import { urlFor } from './helper_functions/SanityHelper.svelte';
+	import { fade } from 'svelte/transition';
 
 	let visibility = 'invisible';
 	function handleMouseOver(event: any) {
@@ -51,6 +52,7 @@
 			on:blur={() => void 0}
 		>
 			<img
+				in:fade={{ duration: 1500 }}
 				src={urlFor(data.body.people[0].profile_picture).width(2000).height(2000).url()}
 				class="rounded-full border-8 w-80 drop-shadow-xl "
 				alt="profile_picture"
