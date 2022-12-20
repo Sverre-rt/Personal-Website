@@ -18,13 +18,13 @@
 		<a href="/">
 			<img
 				src={urlFor(bitmojis[0].bitmoji).url()}
-				class="w-20"
+				class="w-12 md:w-20"
 				alt="bitmoji-{bitmojis[0].name}"
 				loading="lazy"
 			/>
 		</a>
 	</div>
-	<div class="flex flex-row ml-auto	space-x-6 mr-4 py-2 text-2xl ">
+	<div class="flex flex-row ml-auto	space-x-2 md:space-x-6 pr-4 py-2 md:text-2xl ">
 		{#each sections as section}
 			<a
 				data-sveltekit-preload-data="tap"

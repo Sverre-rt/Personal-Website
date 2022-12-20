@@ -18,8 +18,10 @@
 </script>
 
 <div class="bg-grey-background-1 h-screen flex justify-center items-start">
-	<div class="flex flex-row items-center justify-center space-x-16 pt-12 max-w-3xl">
-		<div class="max-w-2xl">
+	<div
+		class="flex flex-col md:flex-row items-center justify-center md:space-x-16 pt-2 md:pt-12 max-w-3xl"
+	>
+		<div class="max-w-2xl px-2 md:px-0 pb-4 md:pb-0">
 			<p class="text-3xl">Hi. I'm</p>
 			<p class="text-4xl text-red-home">Sverre Rynning-Tønnesen</p>
 			<div class="p-0.5 {visibility} rounded bg-red-home mt-1 animate-pulse" />
@@ -42,6 +44,7 @@
 			</div>
 		</div>
 		<div
+			class="flex border-black border-8 rounded-full"
 			on:mouseover={handleMouseOver}
 			on:focus={() => void 0}
 			on:mouseout={handleMouseOut}
@@ -49,7 +52,7 @@
 		>
 			<img
 				src={urlFor(data.body.people[0].profile_picture).width(2000).height(2000).url()}
-				class="rounded-full w-80 drop-shadow-xl outline outline-offset-40"
+				class="rounded-full border-8 w-80 drop-shadow-xl "
 				alt="profile_picture"
 				loading="lazy"
 			/>

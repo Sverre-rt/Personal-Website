@@ -52,7 +52,7 @@
 					>
 						<img
 							src={urlFor(companie.logo).url()}
-							class="w-fit min-h-14 max-h-14"
+							class="h-14"
 							alt="logo-{companie.name}"
 							loading="lazy"
 						/>
