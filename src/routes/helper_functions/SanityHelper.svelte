@@ -6,4 +6,13 @@
 	export function urlFor(source: any) {
 		return builder.image(source);
 	}
+
+	export async function asyncUrlFor(source: any) {
+		const result = builder.image(source);
+		if (result) {
+			return result;
+		} else {
+			throw new Error(result);
+		}
+	}
 </script>

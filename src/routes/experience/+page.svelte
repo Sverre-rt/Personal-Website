@@ -2,11 +2,9 @@
 	export const prerender = true;
 </script> -->
 <script lang="ts">
-	import myConfiguredSanityClient from '../../sanity/sanityClient';
-	import imageUrlBuilder from '@sanity/image-url';
-	import { urlFor } from '../helper_functions/SanityHelper.svelte';
+	import { asyncUrlFor, urlFor } from '../helper_functions/SanityHelper.svelte';
 	import type { CompanyType } from 'src/types/sanity_types';
-	const builder = imageUrlBuilder(myConfiguredSanityClient);
+	import { Spinner } from 'flowbite-svelte';
 
 	const card_bg_colors = ['bg-card-bg-1', 'bg-card-bg-2', 'bg-card-bg-3', 'bg-card-bg-4'];
 
@@ -72,18 +70,24 @@
 							</p>
 						</div>
 						<div class="flex flex-row w-full pb-4 pr-1">
-							<div class="pt-3">
+							<div class="pt-3 w-3/5">
 								<p class="font-futuraMedium">Position: {companie.position}</p>
 								<p class="pb-6 font-futuraMedium">Location: {companie.city}, {companie.country}</p>
 								<p class="font-futuraHeavy">Job Description:</p>
 								<p class="font-futuraMedium">{companie.jobDescription}</p>
 							</div>
-							<img
-								src={urlFor(companie.memoryImage).width(1000).url()}
-								class="w-2/5 md:w-60"
-								alt="memory-{companie.name}"
-								loading="lazy"
-							/>
+							{#await asyncUrlFor(companie.memoryImage)}
+								<div class="flex w-2/5 md:w-60 justify-center items-center">
+									<Spinner color="gray" />
+								</div>
+							{:then fetched_url}
+								<img
+									src={fetched_url.width(1000).url()}
+									class="w-2/5 md:w-60"
+									alt="memory-{companie.name}"
+									loading="lazy"
+								/>
+							{/await}
 						</div>
 					</div>
 				</div>
